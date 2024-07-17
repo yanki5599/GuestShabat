@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CategoryAndFoodForm));
             label_categoryName = new Label();
             dataGridView_allGuestsFood = new DataGridView();
             button_addFood = new Button();
@@ -42,6 +43,7 @@
             // label_categoryName
             // 
             label_categoryName.AutoSize = true;
+            label_categoryName.BackColor = Color.Transparent;
             label_categoryName.Font = new Font("Segoe UI", 16F);
             label_categoryName.Location = new Point(264, 30);
             label_categoryName.Name = "label_categoryName";
@@ -53,17 +55,19 @@
             // 
             dataGridView_allGuestsFood.AllowUserToAddRows = false;
             dataGridView_allGuestsFood.AllowUserToDeleteRows = false;
+            dataGridView_allGuestsFood.BackgroundColor = Color.White;
             dataGridView_allGuestsFood.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView_allGuestsFood.Location = new Point(109, 79);
             dataGridView_allGuestsFood.Name = "dataGridView_allGuestsFood";
             dataGridView_allGuestsFood.ReadOnly = true;
+            dataGridView_allGuestsFood.RightToLeft = RightToLeft.Yes;
             dataGridView_allGuestsFood.Size = new Size(458, 150);
             dataGridView_allGuestsFood.TabIndex = 1;
             // 
             // button_addFood
             // 
             button_addFood.Font = new Font("Segoe UI", 12F);
-            button_addFood.Location = new Point(109, 277);
+            button_addFood.Location = new Point(450, 277);
             button_addFood.Name = "button_addFood";
             button_addFood.Size = new Size(117, 29);
             button_addFood.TabIndex = 2;
@@ -75,10 +79,12 @@
             // 
             dataGridView_currentGuestFoods.AllowUserToAddRows = false;
             dataGridView_currentGuestFoods.AllowUserToDeleteRows = false;
+            dataGridView_currentGuestFoods.BackgroundColor = SystemColors.ButtonHighlight;
             dataGridView_currentGuestFoods.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView_currentGuestFoods.Location = new Point(109, 355);
             dataGridView_currentGuestFoods.Name = "dataGridView_currentGuestFoods";
             dataGridView_currentGuestFoods.ReadOnly = true;
+            dataGridView_currentGuestFoods.RightToLeft = RightToLeft.Yes;
             dataGridView_currentGuestFoods.Size = new Size(458, 150);
             dataGridView_currentGuestFoods.TabIndex = 1;
             // 
@@ -107,17 +113,20 @@
             // textBox_newFood
             // 
             textBox_newFood.Font = new Font("Segoe UI", 12F);
-            textBox_newFood.Location = new Point(239, 277);
+            textBox_newFood.Location = new Point(285, 277);
             textBox_newFood.Margin = new Padding(3, 3, 10, 3);
             textBox_newFood.Name = "textBox_newFood";
             textBox_newFood.PlaceholderText = "הכנס שם מאכל";
             textBox_newFood.Size = new Size(139, 29);
             textBox_newFood.TabIndex = 3;
+            textBox_newFood.TextAlign = HorizontalAlignment.Right;
             // 
             // CategoryAndFoodForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackgroundImage = Properties.Resources.Background;
+            BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(653, 625);
             Controls.Add(textBox_newFood);
             Controls.Add(button_previous);
@@ -126,8 +135,11 @@
             Controls.Add(dataGridView_currentGuestFoods);
             Controls.Add(dataGridView_allGuestsFood);
             Controls.Add(label_categoryName);
+            Icon = (Icon)resources.GetObject("$this.Icon");
+            MaximumSize = new Size(669, 664);
+            MinimumSize = new Size(669, 664);
             Name = "CategoryAndFoodForm";
-            RightToLeft = RightToLeft.Yes;
+            RightToLeft = RightToLeft.No;
             RightToLeftLayout = true;
             StartPosition = FormStartPosition.CenterScreen;
             Text = "רשימת מאכלים בקטגוריה";

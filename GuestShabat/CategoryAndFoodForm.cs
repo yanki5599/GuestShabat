@@ -31,6 +31,8 @@ namespace GuestShabat
             InitializeComponent();
 
             label_categoryName.Text = categoryModel.Name;
+            dataGridView_allGuestsFood.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridView_currentGuestFoods.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
 
         /// <summary>
